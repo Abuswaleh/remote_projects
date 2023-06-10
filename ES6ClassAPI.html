@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<head>
+    
+</head>
+<body>
+    <p>hello </p>
+    <script>
+  class API{
+    constructor(url,method="GET"){
+        this.url = url;
+        this.method = method
+    }
+    #secure = false;
+
+    isSecure(){
+        if(this.url.slice(0,5) == "https"){
+            this.secure = true;
+        }else{
+            this.secure = false;
+        }
+        return this.#secure;
+    }
+
+    updateUrl(newUrl){
+        this.url = newUrl;
+        this.isSecure();
+    }
+}</script>
+</body>
